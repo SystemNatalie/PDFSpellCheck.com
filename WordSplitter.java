@@ -121,19 +121,7 @@ public class WordSplitter {
     }
 
     public static void main(String[] args) {
-        WordSplitter splitter = new WordSplitter("Word-splitter, test! Can you handle:  \n" +
-                "1. \"Complex 'nested' quotes,\" she asked?  \n" +
-                "2. Emails (e.g., user_name+filter@sub.domain.co.uk)  \n" +
-                "3. Currency: $1,000.00 / €500,50 / ¥100万  \n" +
-                "4. Strange-hyphenated–words—like this…  \n" +
-                "5. Math: 2.3e-5 ≈ 3.14 × 10² (even ±5%)  \n" +
-                "6. Unicode: 日本語, русский, ελληνικά, 汉字  \n" +
-                "7. Contractions: can’t, shouldn’ve, o’clock  \n" +
-                "8. Abbrvs.: Ph.D., Mr., U.S.A., 10am, 5pm  \n" +
-                "9. Code/tech: #hashtag, @mention, <html>, JSON{}  \n" +
-                "10. Emoji/symbols: \uD83D\uDC4D \uD83D\uDD25 ⚡ © ® ™  \n" +
-                "11. Whitespace:\\t tabs,\\r\\n newlines,\\v weird\\u00A0spaces  \n" +
-                "12. Edge!!! cases??? (e.g., ..., ---, [[[ ]]])  ");
+        WordSplitter splitter = new WordSplitter("The quick brown fox jumps over the lazy dog, but mother-in-law's recipe—passed down from her great-grandfather's 1920s' cookbook—is state-of-the-art! Dr. O'Neil's study on pre-COVID-19 data (published in J. Med. Res., pp. 10–12) shows that AT&T's 5G's impact isn't just hype; it's re-shaping tech. 'Rock 'n' roll's golden era,' she mused, 'wasn't all peace-and-love—think counter-culture's don'ts versus do's.' A passer-by's hat (a $1,000.00 designer piece!) flew off during NYC's windstorm, while editors-in-chief's opinions varied wildly: 'It's 90% accurate,' vs. 'Re-examine the data!' McDonald's's sales rose post-2020, but ex-CEO's '10am meetings' policy caused chaos. Can your splitter handle co-owner's ambiguous contract clauses, pre-1990's tax laws, or phrases like 'it’s' vs. 'its'? Punctuation!!!—like this?!—or ellipses... test limits. Extra spaces, tabs, and weird\\u00A0gaps shouldn’t break it.");
         List<String> words = splitter.split();
         for (String word : words) {
             System.out.println(word);
